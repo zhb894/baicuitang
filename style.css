@@ -273,7 +273,7 @@ input:focus {
         font-size: 35px;
         position: absolute;
         top: 15px;
-        left: 20px;
+        right: 20px;
         border: none;
         cursor: pointer;
     }
