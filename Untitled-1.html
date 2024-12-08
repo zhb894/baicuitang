@@ -1,134 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Documet</title>
-    <!-- 我们先进行样式初始化 -->
-     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            text-decoration: none;
-            list-style: none;
-        }
-        .main{
-            width: 800px;/* 让整个网页只有800宽 */
-            margin: auto;/* 让它水平居中 */
-        }
-        .header,.nav,.container,.footer{
-            /* 这四个盒子都要左浮动 */
-            float: left;
-            /* 让它们满浏览器 */
-            width: 100%;
-            /* 消除内边距对盒子影响 */
-            box-sizing: border-box;
-        }
-        .header{
-            background: linear-gradient( #98f158,#4ae623);
-            padding: 20px;
-            text-align: center;
-            position: relative;
-        }
-        .header img{
-            width: 80px;
-            height: 80px;
-            position: absolute;
-            top: 10px;
-            left: 200px;          
-        }
-        .nav{
-            background: linear-gradient(#56b747,#639226);
-        }
-        .nav a{
-            color: #fff;
-            padding: 10px 66.2px;
-            display: inline-block;/* 让链接以块的形式显示 */
-        }
-        .nav a:hover{
-            background: #bbb;
-            color: #000;
-        }
-        .container{
-            background-image: url("D:\Image_1731985215290.png");
-            width: 800px;
-            height: 1199px;
-        }
-        /*-- 左右两边固定宽度200 */
-        .lside{
-            width: 200px;
-            float: left;
-            text-align: center;
-        }
-        .rside{
-            width: 200px;
-            float: right;
-            text-align: center;
-        }
-        /* 所以中间栏加左右边距 */
-        .content{
-            text-align: center;/* 文字居中 */
-            margin: 0px 205px;
-        }
-        /* 内边距 */
-        .lside,.rside,.content{
-            padding: 5px;
-            box-sizing: border-box;/* 去内边距影响 */
-            color: #238ee6;
-        }
-        .footer{
-            padding: 10px;
-            background: #ccc;
-            text-align: :center;
-        }
-        /* 浏览器宽度小于700时，三个栏进行竖排 */
-        @media screen and (max-width:700px) {
-            .lside,.rside,.content{
-                width: 100%;
-                margin: 0px;
-            }
-        }
-     </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>柏翠堂</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body bgcolor="white" >
-    <div class="main">
-        <div class="header">
-            <img src="D:\Image_1731985229536.png" alt="产品logo">
-            <h1>柏翠堂</h1>
-            <p> “柏翠堂养生，让健康如翠柏常青”</p>
-            <p>（相关功能开发中，敬请期待。）</p>
+<body>
+    <header>
+    <button class="menu">&#9776;</button>
+    <h1>柏翠堂</h1>
+    <nav>
+    <ul>
+        <li><a href="#">登录</a></li>
+        <li><a href="#">注册</a></li>
+        <li><a href="#">最新消息</a></li>
+        <li><a href="#">关于我们</a></li>
+        <li><a href="#">软件下载</a></li>
+        
+    </ul>
+    </nav>
+    </header>
+    <main>
+    <section class="news">
+    <h2>柏翠堂</h2>
+    <p>为全民养生而奋斗，推出产品：悠韵养生平台</p>
+    </section>
+
+    <section class="news1">
+        <h2>悠韵养生平台</h2>
+        <p>为全年龄段用户提供简便、低门槛养生服务</p>
+    </section>
+    <section class="news2">
+        <h2>功能齐全</h2>
+        <p>创新多元结合，运用网络轻松养生</p>
+    </section>
+    <section class="news3">
+        <h2>您的养生伙伴！</h2>
+        <p>不止于走近养生，更让养生走进来</p>
+    </section>
+        
+    <section class="slogan">
+    <blockquote>“治身养性谨务其细，<br>不可以小益为不平而不修，<br>不可以小损为无伤而不防”</blockquote>
+    </section>
+
+    <section class="view">
+
+        <img src="images/Image_1731985229536.jpg" alt="产品logo">
+
+        <div class="info">
+        <h2>公司产品：悠韵养生平台</h2>
+        <p>享受一步到位的养生服务，与身边的人一同快乐养生！</p>
         </div>
-        <div class="nav">
-            <a href="#">最新消息</a>
-            <a href="#">关于我们</a>
-            <a href="#">线下活动</a>
-            <a href="#">自营商城</a>
+        
+    </section>
+
+    <section class="product">
+        <div>
+            <img src="images/图片1.png" alt="">
+            <h3>养生知识讲解</h3>
+            <p>专业团队进行权威讲解，让用户了解养生，进而走近养生</p>
         </div>
-        <div class="container">
-            <!-- 主体放左中右三个盒子,用margin进行三栏布局中间栏是自适应，so，中间栏在第三个 -->
-            <div class="lside">
-                <h2>公司介绍</h2>
-                <p>
-                    柏萃堂公司是一家致力于推广健康生活方式和养生知识的电子平台公司。结合了古代草药学，中医学，现代科学，营养学、运动科学和心理学等，公司以“科技赋能健康，智慧引领生活”为核心理念，通过构建一个综合性的在线平台，为用户提供个性化的健康咨询、养生指导和健康管理服务。
-                </p>
-            </div>
-            <div class="rside">
-                <h2>产品介绍</h2>
-                <p>
-                    悠韵养生平台，一款全方位的养生软件。它具备视频交流功能，用户可与养生专家、爱好者实时互动，分享心得、答疑解惑。电商板块汇聚各类养生好物，从滋补食材到保健器材，一键选购，便捷送达。同时，精心打造的科普专区，涵盖丰富养生知识，如中医养生理念、四季养生要点、各类疾病预防等，以专业且易懂的内容，助力用户深入了解养生之道，开启科学养生之旅，让健康与便捷在这个平台完美融合。
-                </p>
-            </div>
-            <div class="content">
-                <h2>市场分析</h2>
-                <p>
-                    现代养生逐渐成为一种潮流，出于增强体质的角度，它代表着现代年轻人对身体健康的重视并愿意及时改善，而伴随着的问题便是由于对养生知识的了解不全面与盲目跟风的行为，用不当的方式对身体造成了伤害，比如整颗红枣直接泡水喝，以为补气养颜，实则徒增湿气，应切丝去核，配上姜丝；长期使用白粥等流食，以为清淡养胃，实则刺激胃酸，加重口臭，腹泻，反胃等问题；长期轻断食，以为提高代谢，实则加速分泌，加速排空却产生激素刺激过量胃酸分泌。 所以我们顺应大众对于正确养生的需求，建立具有全面详尽科普的饮食养生科普平台，通过线上网络营销、线下交流活动展同步经营，不断扩大自身影响力，把行业做大、做精、做强。 
-                </p>
-            </div>
+        <div>
+            <img src="images/图片2.png" alt="">
+            <h3>养生视频创作</h3>
+            <p>鼓励用户分享养生心得与日常，让养生走进用户生活</p>
         </div>
-        <div class="footer">
-            <p>版权声明，备案信息，联系方式，友情链接等。</p>
+        <div>
+            <img src="images/图片5.png" alt="">
+            <h3>养生线下体验馆</h3>
+            <p>提供养生线下活动与养生器材，让用户爱上养生</p>
         </div>
-    </div>
- </body>
+        <div>
+            <img src="images/图片4.png" alt="">
+            <h3>养生产品购物</h3>
+            <p>提供有保障养生好货，同时实行购物优惠政策，让养生实惠</p>
+        </div>
+        <div>
+            <img src="images/图片3.png" alt="">
+            <h3>养生个性化指导</h3>
+            <p>个性化定制养生方案，让养生更高效、精确</p>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <p>欢迎关注柏翠堂，可不定期收到线下活动，商品优惠等信息！</p>
+        <form>
+            <input type="email" placeholder="请输入您的电子邮件" required>
+            <button type="submit">送出</button>
+        </form>
+    </section>
+    <p></p>
+    </main>
+    <footer>
+        <p>Copyright ©  2024 柏翠堂 All Rights Reserved.</p>
+    </footer>
+</body>
 </html>
